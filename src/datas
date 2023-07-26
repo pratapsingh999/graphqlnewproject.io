@@ -1,0 +1,107 @@
+
+// const GET_EPISODE = gql`
+//   query GetEpisodeInfo($id: ID!) {
+//     episode(id: $id) {
+//       name
+//       episode
+//       air_date
+//       characters{
+//         name
+//       }
+//     }
+//   }
+// `;
+
+// const GET_EPISODE = gql`
+//   query GetEpisodeInfo($id: ID!) {
+//     episode(id: $id) {
+//       name
+//       episode
+//       air_date
+//       characters {
+//         name
+//       }
+//       id
+//       created
+//     }
+//   }
+// `;
+
+
+
+
+//return
+
+ {/* <div>
+      <h2 className="text-center mt-5  text-black">Episode Details</h2>
+      <div className="mt-5 text-black">
+        <h3 className="ml-3">Episode Name: {episode.name}</h3>
+        <p>Episode Code: {episode.episode}</p>
+        <p>Air Date: {episode.air_date}</p>
+        <h4>Characters in this Episode:</h4>
+        <ol>
+          {episode.characters.map((character) => (
+            <li key={character.name}>{character.name}</li>
+          ))}
+        </ol>
+        </div>
+        <div className=" mt-3">
+        <Link className="buttons" to = "/">Home page</Link>
+        <Link to={`/characters/${id}`} className="buttons">Back to Character Info</Link>
+        </div>
+    </div> */}
+
+
+
+
+
+     {/* <div className="cards p-2">
+        <div className="character-box">
+          <h3 className="ml-3">Episode Name: {episode.name}</h3>
+          <p>Episode Code: {episode.episode}</p>
+          <p>Air Date: {episode.air_date}</p>
+          <p>Episode ID: {episode.id}</p>
+          <p>Created: {episode.created}</p>
+          </div> 
+          </div>  */}
+
+
+
+
+
+             
+         
+          <div className="container-fluid mt-3">
+          <div className=" ml-5 row text-center ">
+          <h4>Characters in this Episode:</h4>
+          <ol>
+            {episode.characters.map((character) => (
+              <div className="col-10 col-md-4 mt-5">
+                  <div className="card p-2">
+                    <div className="d-flex align-items-center">
+                    <div className="ml-5 w-200">
+                        <div className="">
+              <li key={character.name}>
+                <p>Name:{character.name}</p>
+                <p>Episode Code: {character.status}</p>
+                <p>Air Date: {character.species}</p>
+                <p>Gender: {character.gender}</p>
+                <p>Image ID: {character.image}</p>
+              </li>
+              </div> 
+          </div> 
+          </div> 
+           </div> 
+          </div> 
+            ))}
+          </ol>
+         
+          <Link className="buttons" to="/">
+            Home page
+          </Link>
+          <Link to={`/characters/${id}`} className="buttons">
+            Back to Character Info
+          </Link>
+        
+      </div>
+      </div> 
